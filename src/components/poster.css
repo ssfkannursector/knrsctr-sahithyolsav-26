@@ -1,0 +1,451 @@
+/* ═══════════════════════════════════════════════════════════
+   poster.css — base-image poster overlays
+   All positions are % of the container so they scale with
+   the image at any size. Adjust top/left/font-size per design.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Shared base pattern ──────────────────────────────────── */
+/* Every poster container: relative, sized to image aspect.
+   We use width:100% on the img so the container hugs it,
+   then all overlays are position:absolute.                    */
+
+[class^="p1-"],
+[class^="p2-"],
+[class^="p3-"],
+[class^="p4-"] {
+  box-sizing: border-box;
+}
+
+/* Text overflow safety for all overlay divs */
+.p1-container > div,
+.p2-container > div,
+.p3-container > div,
+.p4-container > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ══════════════════════════════════════════════════════════
+   POSTER 1
+   ══════════════════════════════════════════════════════════ */
+
+.p1-container {
+  position: relative;
+  display: inline-block;   /* shrink-wraps the image */
+  line-height: 0;          /* removes ghost gap under img */
+}
+
+.p1-base {
+  width: 100%;
+  display: block;
+}
+
+/* Program name
+   ▸ Adjust top/left/font-size/color to match your PNG layout */
+.p1-program {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 2.2cqw;       /* use px if cqw not supported: e.g. 22px */
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Category label */
+.p1-category {
+  position: absolute;
+  top: 23%;
+  left: 5%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.1cqw;
+  font-weight: 600;
+  color: #444;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+/* 1st place */
+.p1-first-name {
+  position: absolute;
+  top: 32%;
+  left: 12%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.8cqw;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2;
+}
+.p1-first-unit {
+  position: absolute;
+  top: 38%;
+  left: 12%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1cqw;
+  color: #555;
+}
+
+/* 2nd place */
+.p1-second-name {
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.8cqw;
+  font-weight: 700;
+  color: #111;
+}
+.p1-second-unit {
+  position: absolute;
+  top: 56%;
+  left: 12%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1cqw;
+  color: #555;
+}
+
+/* 3rd place */
+.p1-third-name {
+  position: absolute;
+  top: 67%;
+  left: 12%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.8cqw;
+  font-weight: 700;
+  color: #111;
+}
+.p1-third-unit {
+  position: absolute;
+  top: 73%;
+  left: 12%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1cqw;
+  color: #555;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   POSTER 2
+   ══════════════════════════════════════════════════════════ */
+
+.p2-container {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+
+.p2-base {
+  width: 100%;
+  display: block;
+}
+
+.p2-program {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 2.2cqw;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.p2-category {
+  position: absolute;
+  top: 23%;
+  left: 5%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.1cqw;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.p2-first-name {
+  position: absolute;
+  top: 32%;
+  left: 12%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.8cqw;
+  font-weight: 700;
+  color: #fff;
+}
+.p2-first-unit {
+  position: absolute;
+  top: 38%;
+  left: 12%;
+  font-family: "Times New Roman", serif;
+  font-size: 1cqw;
+  color: rgba(255,255,255,0.6);
+}
+
+.p2-second-name {
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.8cqw;
+  font-weight: 700;
+  color: #fff;
+}
+.p2-second-unit {
+  position: absolute;
+  top: 56%;
+  left: 12%;
+  font-family: "Times New Roman", serif;
+  font-size: 1cqw;
+  color: rgba(255,255,255,0.6);
+}
+
+.p2-third-name {
+  position: absolute;
+  top: 67%;
+  left: 12%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.8cqw;
+  font-weight: 700;
+  color: #fff;
+}
+.p2-third-unit {
+  position: absolute;
+  top: 73%;
+  left: 12%;
+  font-family: "Times New Roman", serif;
+  font-size: 1cqw;
+  color: rgba(255,255,255,0.6);
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   POSTER 3
+   ══════════════════════════════════════════════════════════ */
+
+.p3-container {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+
+.p3-base {
+  width: 100%;
+  display: block;
+}
+
+.p3-program {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 2.2cqw;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: 1px;
+}
+
+.p3-category {
+  position: absolute;
+  top: 23%;
+  left: 5%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.1cqw;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.p3-first-name {
+  position: absolute;
+  top: 32%;
+  left: 12%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.8cqw;
+  font-weight: 700;
+  color: #fff;
+}
+.p3-first-unit {
+  position: absolute;
+  top: 38%;
+  left: 12%;
+  font-family: "Times New Roman", serif;
+  font-size: 1cqw;
+  color: rgba(255,255,255,0.55);
+}
+
+.p3-second-name {
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.8cqw;
+  font-weight: 700;
+  color: #fff;
+}
+.p3-second-unit {
+  position: absolute;
+  top: 56%;
+  left: 12%;
+  font-family: "Times New Roman", serif;
+  font-size: 1cqw;
+  color: rgba(255,255,255,0.55);
+}
+
+.p3-third-name {
+  position: absolute;
+  top: 67%;
+  left: 12%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.8cqw;
+  font-weight: 700;
+  color: #fff;
+}
+.p3-third-unit {
+  position: absolute;
+  top: 73%;
+  left: 12%;
+  font-family: "Times New Roman", serif;
+  font-size: 1cqw;
+  color: rgba(255,255,255,0.55);
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   POSTER 4
+   ══════════════════════════════════════════════════════════ */
+
+.p4-container {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+
+.p4-base {
+  width: 100%;
+  display: block;
+}
+
+.p4-program {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 2.2cqw;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: 1px;
+}
+
+.p4-category {
+  position: absolute;
+  top: 23%;
+  left: 5%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.1cqw;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.p4-first-name {
+  position: absolute;
+  top: 32%;
+  left: 12%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.8cqw;
+  font-weight: 700;
+  color: #fff;
+}
+.p4-first-unit {
+  position: absolute;
+  top: 38%;
+  left: 12%;
+  font-family: "Times New Roman", serif;
+  font-size: 1cqw;
+  color: rgba(255,255,255,0.55);
+}
+
+.p4-second-name {
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.8cqw;
+  font-weight: 700;
+  color: #fff;
+}
+.p4-second-unit {
+  position: absolute;
+  top: 56%;
+  left: 12%;
+  font-family: "Times New Roman", serif;
+  font-size: 1cqw;
+  color: rgba(255,255,255,0.55);
+}
+
+.p4-third-name {
+  position: absolute;
+  top: 67%;
+  left: 12%;
+  right: 5%;
+  font-family: "Times New Roman", serif;
+  font-size: 1.8cqw;
+  font-weight: 700;
+  color: #fff;
+}
+.p4-third-unit {
+  position: absolute;
+  top: 73%;
+  left: 12%;
+  font-family: "Times New Roman", serif;
+  font-size: 1cqw;
+  color: rgba(255,255,255,0.55);
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   FALLBACK for browsers that don't support cqw
+   If your container has a fixed width (e.g. 360px), these
+   px values kick in automatically via the cascade.
+   Just set container-type: inline-size on the wrapper div.
+   ══════════════════════════════════════════════════════════ */
+
+/* Add this to each container if you want cqw to work:
+   container-type: inline-size;
+   Or just replace cqw values with px values once you know
+   the rendered width of your poster images. */
